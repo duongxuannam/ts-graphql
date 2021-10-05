@@ -68,14 +68,6 @@ export class UserResolver {
     async login(
         @Arg('loginInput') loginInput: LoginInput
     ): Promise<UserMutationResponse> {
-        // const validateRegisterInputErrors = validateRegisterInput(loginInput)
-        // if (validateRegisterInputErrors !== null) {
-        //     return {
-        //         ...validateRegisterInputErrors,
-        //         code: 400,
-        //         success: false,
-        //     }
-        // }
         try {
             const { usernameOrEmail, password } = loginInput
             const existingUser = await User.findOne(usernameOrEmail.includes('@') ? {email:usernameOrEmail} : {username:usernameOrEmail})
