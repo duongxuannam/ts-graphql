@@ -1,0 +1,14 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "ts-node src/index.ts ",
+    "watch": "tsc -w"
+  },
+  "devDependencies": {
+    "@types/node": "^16.10.2",
+    "typescript": "^4.4.3"
+  }
+}
